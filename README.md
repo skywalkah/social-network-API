@@ -6,16 +6,53 @@ API for a social network web application where users can share their thoughts, r
 
 ## API Documentation
 ## Installation
-N/A
+1. Clone this repo:
+```bash
+git clone https://github.com/skywalkah/social-network-API
+```
+2. Enter the directory:
+```bash
+cd social-network-API
+```
+3. Run this command to install dependencies
+```bash
+npm install
+```
+4. Run the following command in your terminal to start the application
+```bash
+npm run start
+```
+5. Open [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) to test routes
 
 ## Usage
+1. Clone this repo:
+```bash
+git clone https://github.com/skywalkah/social-network-API
+```
+2. Enter the directory:
+```bash
+cd social-network-API
+```
+3. Run this command to install dependencies
+```bash
+npm install
+```
+4. Run the following command to populate the database
+```bash
+npm run seed
+```
+5. Run the following command in your terminal to start the application
+```bash
+npm run start
+```
+## What it should look like
+Video demonstrating all of the Social Media API routes in Insomnia: [here](URL). 
 
-
-![Text](path/url)
-
+This is what it should look like using [Insomnia](https://insomnia.rest/):
+![A screenshot of the desktop view](/public/assets/img/insomnia.png)
 
 ## License
 MIT
 
 ## GitHub
-GitHub Repository: https://github.com/skywalkah/borrowhood/tree/main
+GitHub Repository: https://github.com/skywalkah/social-network-API
