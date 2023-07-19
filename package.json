@@ -1,0 +1,24 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skywalkah/social-network-API.git"
+  },
+  "author": "Lucas Schvindt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skywalkah/social-network-API/issues"
+  },
+  "homepage": "https://github.com/skywalkah/social-network-API#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^7.4.0"
+  }
+}
