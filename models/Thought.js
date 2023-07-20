@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const moment = require('moment'); // optionally you can use another date library
+const moment = require('moment');
 
 const ReactionSchema = new Schema(
   {
