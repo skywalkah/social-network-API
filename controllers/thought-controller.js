@@ -1,7 +1,7 @@
 const { Thought, User } = require('../models');
 
 const thoughtController = {
-  // get all Thoughts
+  // Find all thoughts
   async getAllThoughts(req, res) {
     try {
       const dbThoughtData = await Thought.find({})
@@ -11,6 +11,11 @@ const thoughtController = {
         })
         .select('-__v')
         .sort({ _id: -1 });
+      
+      if (!dbThoughtData) {
+        res.status(404).json({ message: 'No thoughts found!' });
+        return;
+      }
 
       res.json(dbThoughtData);
     } catch (err) {
@@ -19,7 +24,7 @@ const thoughtController = {
     }
   },
 
-  // get one Thought by id
+  // Find a thought by id
   async getThoughtById({ params }, res) {
     try {
       const dbThoughtData = await Thought.findOne({ _id: params.id })
@@ -41,7 +46,7 @@ const thoughtController = {
     }
   },
 
-  // create Thought
+  // Create a thought
   async createThought({ body }, res) {
     try {
       const thought = await Thought.create(body);
@@ -52,7 +57,7 @@ const thoughtController = {
       );
   
       if (!dbUserData) {
-        res.status(404).json({ message: 'No user found with this id!' });
+        res.status(404).json({ message: 'No thought created!' });
         return;
       }
   
@@ -62,7 +67,7 @@ const thoughtController = {
     }
   },
 
-  // update Thought by id
+  // Update a thought by id
   async updateThought({ params, body }, res) {
     try {
       const dbThoughtData = await Thought.findOneAndUpdate(
@@ -97,7 +102,7 @@ const thoughtController = {
     }
   },
 
-  // Add reaction
+  // Add a reaction
   async addReaction({ params, body }, res) {
     try {
       const dbThoughtData = await Thought.findOneAndUpdate(
@@ -107,7 +112,7 @@ const thoughtController = {
       )
 
       if (!dbThoughtData) {
-          res.status(404).json({ message: 'No thought found with this id!' });
+          res.status(404).json({ message: 'No reaction created!' });
           return;
       }
 
@@ -117,7 +122,7 @@ const thoughtController = {
     };
   },
 
-  // Delete reaction
+  // Delete a reaction by id
   async removeReaction({ params }, res) {
     try {
       const dbThoughtData = await Thought.findOneAndUpdate(

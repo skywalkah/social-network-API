@@ -1,7 +1,7 @@
 const { User, Thought } = require('../models');
 
 const userController = {
-  // get all users
+  // Find all users
   async getAllUsers(req, res) {
     try {
       const dbUserData = await User.find({})
@@ -19,7 +19,7 @@ const userController = {
     };
   },
 
-  // get one user by id
+  // Find a user by id
   async getUserById({ params }, res) {
     try {
       const dbUserData = await User.findOne({ _id: params.id })
@@ -35,7 +35,7 @@ const userController = {
     };
   },
 
-  // create User
+  // Create a user
   async createUser({ body }, res) {
     try {
       const dbUserData = await User.create(body)
@@ -46,7 +46,7 @@ const userController = {
     };
   },
 
-  // update User by id
+  // Update user by id
   async updateUser({ params, body }, res) {
     try {
       const dbUserData = await User.findOneAndUpdate(
@@ -66,7 +66,7 @@ const userController = {
     };
   },
 
-  // delete user
+  // Delete user by id
   async deleteUser({ params }, res) {
     try {
       const dbUserData = await User.findOneAndDelete({ _id: params.id });
@@ -82,7 +82,7 @@ const userController = {
     };
   },
 
-  // add a friend to a user's friend list
+  // Add a friend to a user's friend list
   async addFriend({ params }, res) {
     try {
       const dbUserData = await User.findOneAndUpdate(
@@ -105,7 +105,7 @@ const userController = {
     };
   },
 
-  // remove a friend from a user's friend list
+  // Remove a friend from a user's friend list
   async removeFriend({ params }, res) {
     try {
       const dbUserData = await User.findOneAndUpdate(
