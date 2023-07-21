@@ -28,6 +28,7 @@ npm run start
 ```
 6. Open [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) to test routes
 ## What it should look like
+Video demonstrating how to populate the database and start the application's server: [here](https://drive.google.com/file/d/1hS2omoUoKrowf7iK9hMxkUo4bnk1iP5f/view).  
 Video demonstrating all of the Social Media API routes in Insomnia: [here](https://drive.google.com/file/d/1bQGox_o5SQV1LVXyLEHXqqLxv9nEMnGb/view). 
 
 This is what it should look like using [Insomnia](https://insomnia.rest/):
